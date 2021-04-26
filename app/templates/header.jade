@@ -1,0 +1,9 @@
+header.header
+    .container-fluid
+        .header_wrapper.row
+            .nav.col-sm-4.offset-sm-4
+                ul.nav_list.col-sm-12
+                    - let list = {"#main":"Главная", "#about":"Обо мне", "#contacts":"Контакты"};
+                    each val, key in list
+                        li.nav_list__item
+                            a.nav_list__link(href=key) #{val}
